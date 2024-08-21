@@ -7,7 +7,7 @@ pipeline {
             steps {
                 script {
                     // List of containers to check
-                    def containers = ['python-app', 'nginx', 'redis']
+                    def containers = ['visitor_counter', 'nginx', 'redis']
 
                     containers.each { container ->
                         // Check if the container exists
