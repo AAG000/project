@@ -21,6 +21,7 @@ pipeline {
                                 echo "${container} is already running."
                             } else {
                                 echo "${container} is not running. Starting the container..."
+                                sh 'docker-compose down'
                                 sh 'docker-compose up -d'
                             }
                         } else {
